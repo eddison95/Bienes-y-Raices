@@ -1,0 +1,371 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  /* ME MODIFICA TODO EL TEXTO EN GENERAL DE TODA LA PANTALLA */
+  font-family: 'Lato', sans-serif;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+/* GLOBALES */
+img {
+  /* AFECTA TODAS LAS IMAGENES */
+  max-width: 100%;
+}
+
+.contenedor {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-size: 3.8rem;
+}
+
+h2 {
+  font-size: 3.4rem;
+}
+
+h3 {
+  font-size: 3rem;
+
+}
+
+h4 {
+  font-size: 2.6rem;
+}
+
+
+
+/* UTILIDADES */
+.seccion {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.centrar-texto {
+  text-align: center;
+}
+
+.d-block {
+  display: block !important;
+}
+
+/* BOTONES */
+.boton {
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.8rem;
+  padding: 1rem 3rem;
+  /* PADDING ES ESPACIO HACIA DENTRO DEL CONTENIDO, SIMULA UN BOTON */
+  text-align: center;
+  /* CENTRA EL TEXTO */
+  display: inline-block;
+  margin-top: 3rem;
+}
+
+.boton-amarillo {
+  background-color: #e08709;
+}
+
+.boton-verde {
+  background-color: #71b100;
+}
+
+/* HEADER */
+.site-header {
+  background-color: #333333;
+  padding: 1rem 0 3rem 0;
+}
+
+.site-header.inicio {
+  background-image: url(../img/header.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  min-height: 60rem;
+}
+
+.contenido-header {
+  /* ME DA ESPACIO ENTRE EL TITULO Y EL PARRAFO DE ABAJO */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contenido-header h1 {
+  color: white;
+  padding: 2rem;
+  max-width: 60rem;
+  line-height: 2;
+  /* ESPACIO ENTRE RENGLONES */
+}
+
+.barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+}
+
+/* NAVEGACION */
+.navegacion a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  margin-right: 20px;
+}
+
+.navegacion a:hover {
+  color: #71b100;
+}
+
+.navegacion a:last-of-type {
+  margin: 0;
+}
+
+/* ICONOS NOSOTROS */
+.iconos-nosotros {
+  display: flex;
+  /* ME ACOMODA LOS ICONOS DE IZQUIERDA A DERECHA */
+  justify-content: space-between;
+  /* ME DA ESPACIOS ENTRE LOS ICONOS, PERO NECESITO ASIGNARLES UN TAMANO CON FLEX-BASIS*/
+}
+
+.icono {
+  flex-basis: calc(33.3% - 1rem);
+  text-align: center;
+  /* ME ACOMODA EL TEXTO CENTRADO */
+}
+
+.icono h3 {
+  text-transform: uppercase;
+}
+
+/* ANUNCIOS */
+.contenedor-anuncios {    /* PADRE */
+  display: flex;
+  /* ME ACOMODA LOS ICONOS DE IZQUIERDA A DERECHA */
+  justify-content: space-between;
+  flex-wrap: wrap;    /* Me acodoma anuncios en filas */
+
+}
+
+.anuncio {
+   /* flex: 0 0 calc(33.3% - 1rem); es lo mismo que colocar grow, shrink, basis */
+  flex-grow: 0;                       /* crece el tamano del contenido */
+  flex-shrink: 0;
+  flex-basis: calc(33.3% - 1rem);
+  /* TENER CUIDADO CNON LOS ESPACIOS ENTRE EL MENOS */
+  border: solid #b5b5b5 1px;
+  background: #F5F5F5;
+  margin-bottom: 2rem;                /* espacio entre anuncios abajo */ 
+}
+
+.contenido-anuncio {
+  padding: 2rem;
+}
+
+.contenido-anuncio h3,
+.contenido-anuncio p {
+  margin: 0;
+}
+
+.precio {
+  color: #71b100;
+  font-weight: 700;
+}
+
+.iconos-caracteristicas {
+  list-style: none;
+  /* SON BINETAS, EN ESTE CASO LAS ELIMINO */
+  padding: 0%;
+  display: flex;
+  /* ME ACOMODA LOS ICONOS DE IZQUIERDA A DERECHA */
+  justify-content: space-evenly;
+  /* DA ESPACIO ENTRE LOS ICONOS */
+
+}
+
+.iconos-caracteristicas li {
+  display: flex;
+  /* ACOMODA LOS NUMEROS ENTRE LOS ICONOS */
+}
+
+.iconos-caracteristicas li img {
+  margin-right: 2rem;
+  /*  ME DA ESPACIO HACIA LA DERECHA ENTRE LOS ICONOS Y NUMEROS */
+}
+
+.ver-todas {
+  display: flex;
+  /* DEBO COLOCAR DISPLAY FLEX, PARA QUE FUNCIONE FLEX-END  */
+  justify-content: flex-end;
+}
+
+/* CONTACTO HOME */
+.imagen-contacto {
+  background-image: url(../img/encuentra.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 40rem;
+  display: flex;
+  align-items: center;
+}
+
+.contenido-contacto {
+  flex: 1;
+  /* DETECTA CUANTOS PIXELES HAY DISPONIBLES EN EL CAMPO Y AJUSTA EL CONTENIDO */
+  /* ADEMAS ME ACOMODA EL BOTON AL INICIO DEL BLOQUE */
+  color: #ffffff;
+}
+
+.contenido-contacto P {
+  font-size: 1.8rem;
+}
+
+/* SECCION INFERIOR */
+.seccion-inferior {
+  display: flex;
+  justify-content: space-between;
+}
+
+.seccion-inferior .blog {
+  flex-basis: 60%;
+}
+
+.seccion-inferior .testimoniales {
+  flex-basis: calc(40% - 2rem);
+}
+
+
+.entrada-blog {
+  display: flex;
+  /* ACOMODA EL TEXTO AL LADO DE LA IMAGEN */
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.entrada-blog :last-of-type {
+  /* SELECCIONA EL ULTIMO Y ELIMINA ESPACIOS */
+  margin-bottom: 0%;
+}
+
+.entrada-blog .imagen {
+  flex-basis: 40%;
+}
+
+.entrada-blog .texto-entrada {
+  flex-basis: calc(60% - 3rem);
+}
+
+.texto-entrada a {
+  color: black;
+  text-decoration: none;
+}
+
+.texto-entrada h4 {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.texto-entrada h4::after {
+  /* SEUDO ELEMENTO , NO SE PUEDEN SELECCIONAR COMO TEXTO CON EL CURSOR */
+  content: '';
+  /* DA CONTENIDO COMO LETRA O ESPACIOS, EN ESTE CASO LINEA */
+  display: block;
+  width: 15rem;
+  height: .5rem;
+  background-color: #71b100;
+
+  margin-top: 1rem;
+}
+
+.texto-entrada span {
+  color: #e08709;
+}
+
+/* TESTIMONIALES */
+.testimonial {
+  background-color: #71b100;
+  font-size: 2.4rem;
+  padding: 2rem;
+  color: #ffffff;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 3rem;
+
+}
+
+.testimonial p {
+  /* alinea el parrafo a la derecha  */
+  text-align: right;
+}
+
+.testimonial blockquote::before {
+  /* COMILLA, TENGO QUE DARLE MEDIDAS PARA QUE SE MUESTRE DEBIDO A QUE ES UN SEUDO-ELEMENTE*/
+  content: '';
+  background-image: url(../img/comilla.svg);
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  /* SIEMPRE DEBO PONERLO */
+  left: -2rem;
+}
+
+.testimonial blockquote {
+  /*  DEBE DE EXISTIR PARA DARLE UNA POCISION RELATIVA A LAS COMILLAS */
+  position: relative;
+  padding-left: 5rem;
+  font-weight: 300;
+}
+
+/* FOOTER */
+.site-footer {
+  background-color: #333333;
+  margin: 0;
+}
+
+.copyright {
+  margin: 0;
+  color: #ffffff;
+}
+
+.contenedor-footer {
+  padding: 3rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* PAGINAS INTERNAS * Nosotros/
+.contenido-nosotros {
+  display: grid;
+  grid-template-columns: 50% 50%;   /* me pocisiona el contenido dependiendo de la cantidad de hijos 
+                                        que tenga "div" en este caso solo me interesa 2 columnas*/
+  /* grid-template-columns: repeat(second, 50%) cualquiera de la dos formas es correcta*/   
+
+  grid-column-gap: 2rem; /* separacion entre columnas */ 
+}
+
+.Texto-nosotros blockquote{ /* especificamente el Blockquote */
+font-weight: 900;
+font-size: 2rem;
+margin: 0;
+padding: 1rem 0 2rem 0;
+
+}
